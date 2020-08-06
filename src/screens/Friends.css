@@ -1,0 +1,15 @@
+.friends-box {
+  display: grid;
+  grid-template-columns: minmax(20em, 35%) 1fr;
+}
+
+@media (max-width: 700px) {
+  .friends-box {
+    grid-template-columns: none;
+
+    grid-template-rows: minmax(10em, 25%) 1fr;
+  }
+  .chats-box {
+    order: 2;
+  }
+}
