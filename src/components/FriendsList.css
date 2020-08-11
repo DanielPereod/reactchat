@@ -27,6 +27,12 @@
   background-color: #2b2b2b;
   margin: 1px 0 1px 0;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.friend-profile-box {
+  display: flex;
   flex-direction: row;
 }
 
@@ -60,10 +66,34 @@
   background-repeat: no-repeat;
   background-color: #fff;
   border-radius: 5em;
+  min-width: 4em;
+}
+
+.friend-profile-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.friend-profile-btn {
+  padding: 0.5em;
+  background-color: #333333;
+  flex: 1;
 }
 
 .accept-request-btn {
-  padding: 1em;
   color: #fff;
-  background-color: #333333;
+  background-color: rgb(61, 218, 126);
+}
+
+.reject-request-btn {
+  color: #fff;
+  background-color: rgb(218, 66, 61);
+}
+
+.accept-request-btn:active {
+  background-color: rgb(40, 139, 81);
+}
+.reject-request-btn:active {
+  background-color: rgb(150, 44, 41);
 }

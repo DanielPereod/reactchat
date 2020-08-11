@@ -3,10 +3,13 @@ import "./FriendRequestForm.css";
 import { User } from "../App";
 import { sendFriendRequest, getFriendByParam } from "../firebase/helpers";
 
-export default function FriendRequestForm() {
+export default function FriendRequestForm(props) {
   const [friendEmail, setFriendEmail] = useState("");
   const { user } = useContext(User);
+  const { setisLoading } = props;
+
   const handleFriendRequestButton = () => {
+    setisLoading(true);
     getFriendByParam("email", "==", friendEmail, (res) => {
       sendFriendRequest(user.uid, res.id);
     });
